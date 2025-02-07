@@ -91,12 +91,28 @@ class _EggTimerState extends State<EggTimer> {
                                   fontSize: 20, color: EggColors.textPrimary),
                             ),
                             const SizedBox(height: 10),
-                            Image.asset(
-                              'assets/images/eggClock_egg.png',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.cover,
-                              filterQuality: FilterQuality.none,
+                            TweenAnimationBuilder(
+                              tween: Tween<double>(begin: -0.05, end: 0.05),
+                              duration: const Duration(milliseconds: 500),
+                              curve: Curves.easeInOut,
+                              builder: (context, double angle, child) {
+                                return Transform.rotate(
+                                  angle: angle,
+                                  child: child,
+                                );
+                              },
+                              onEnd: () {
+                                if (_remainingSeconds > 0) {
+                                  setState(() {});
+                                }
+                              },
+                              child: Image.asset(
+                                'assets/images/eggClock_egg.png',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                                filterQuality: FilterQuality.none,
+                              ),
                             ),
                             const SizedBox(height: 10),
                             Text(
