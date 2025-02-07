@@ -23,66 +23,54 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
-      // drawer: Drawer(
-      //   child: ListView(
-      //     padding: EdgeInsets.zero,
-      //     children: const <Widget>[
-      //       DrawerHeader(
-      //         decoration: BoxDecoration(
-      //           color: Colors.blue,
-      //         ),
-      //         child: Text(
-      //           'Menu',
-      //           style: TextStyle(
-      //             color: EggColors.textPrimary,
-      //             fontSize: 24,
-      //           ),
-      //         ),
-      //       ),
-      //       ListTile(
-      //         leading: Icon(Icons.home),
-      //         title: Text('Home'),
-      //       ),
-      //       ListTile(
-      //         leading: Icon(Icons.settings),
-      //         title: Text('Settings'),
-      //       ),
-      //     ],
-      //   ),
-      // ),
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/images/eggClock_background.png'),
-            fit: BoxFit.cover,
-            filterQuality: FilterQuality.none,
-          ),
-          border: Border.all(
-            color: EggColors.windowBorder,
-            width: 5,
-          ),
-        ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'A cocinar esos webos',
-                style: TextStyle(fontSize: 24, color: EggColors.textPrimary),
+      body: Stack(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/eggClock_background.png'),
+                fit: BoxFit.cover,
+                filterQuality: FilterQuality.none,
               ),
-              const SizedBox(height: 20),
-              PButton(
-                onPressed: () => _navigateToEggTimerSelection(context),
-                text: 'Iniciar',
-                width: 120,
-                height: 60,
+              border: Border.all(
+                color: EggColors.windowBorder,
+                width: 10,
+              ),
+            ),
+          ),
+          Column(
+            children: [
+              AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                centerTitle: true,
+                title: const Text('Home Page',
+                    style: TextStyle(color: EggColors.textPrimary)),
+              ),
+              Expanded(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      const Text(
+                        'A cocinar esos webos',
+                        style: TextStyle(
+                            fontSize: 24, color: EggColors.textPrimary),
+                      ),
+                      const SizedBox(height: 20),
+                      PButton(
+                        onPressed: () => _navigateToEggTimerSelection(context),
+                        text: 'Iniciar',
+                        width: 120,
+                        height: 60,
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
-        ),
+        ],
       ),
     );
   }
