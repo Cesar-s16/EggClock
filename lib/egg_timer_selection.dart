@@ -43,13 +43,13 @@ class EggTimerSelection extends StatelessWidget {
                         children: <Widget>[
                           PButton(
                             onPressed: () => navigateToTimer(context, 3 * 60),
-                            text: '3 Minutes',
+                            text: '3 Minutos',
                             width: 120,
                             height: 60,
                           ),
                           PButton(
                             onPressed: () => navigateToTimer(context, 5 * 60),
-                            text: '5 Minutes',
+                            text: '5 Minutos',
                             width: 120,
                             height: 60,
                           ),
@@ -61,13 +61,13 @@ class EggTimerSelection extends StatelessWidget {
                         children: <Widget>[
                           PButton(
                             onPressed: () => navigateToTimer(context, 10 * 60),
-                            text: '10 Minutes',
+                            text: '10 Minutos',
                             width: 120,
                             height: 60,
                           ),
                           PButton(
                             onPressed: () => navigateToTimer(context, 15 * 60),
-                            text: '15 Minutes',
+                            text: '15 Minutos',
                             width: 120,
                             height: 60,
                           ),

@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       const Text(
-                        'A cocinar esos webos',
+                        'Vamos a cocinar huevos',
                         style: TextStyle(
                             fontSize: 24, color: EggColors.textPrimary),
                       ),
