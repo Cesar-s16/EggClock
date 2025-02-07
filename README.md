@@ -44,6 +44,13 @@ EggClock es una aplicación Flutter que permite seleccionar y configurar un temp
 - `lib/personal_button.dart`: Widget personalizado para los botones.
 - `lib/colors.dart`: Definición de colores utilizados en la aplicación.
 
+## Galería de Fotos
+
+![Background](assets/images/eggClock_background.png)
+![Egg](assets/images/eggClock_egg.png)
+![Egg Final](assets/images/eggClock_eggFinal.png)
+![Button Skin](assets/images/eggClock_BottonSkin.png)
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si deseas contribuir, por favor sigue los siguientes pasos:
